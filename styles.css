@@ -1,0 +1,108 @@
+/* General Styles */
+body {
+    font-family: 'Padauk', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* Header Styles */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 5px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Section Styles */
+.section-title {
+    color: #2c3e50;
+    position: relative;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eee;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100px;
+    height: 2px;
+    background-color: #3498db;
+}
+
+/* Hobby Card Styles */
+.hobby-card {
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.hobby-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.hobby-icon {
+    color: #3498db;
+}
+
+/* Project Styles */
+.project-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.project-benefits ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.project-benefits li {
+    padding: 5px 0;
+    position: relative;
+    padding-left: 25px;
+}
+
+.project-benefits li::before {
+    content: '✓';
+    color: #27ae60;
+    position: absolute;
+    left: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 70px 0;
+    }
+    
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .section-title::after {
+        width: 60px;
+    }
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
